@@ -9,19 +9,44 @@ function gameIntro() {
     let input = parseInt(prompt("How many round of Rock, Paper, Scissors do you want to play?:  "));
       return input;
 
-    console.log(`"the sum is" ${input}`);
+    console.log(`"We are playing" ${input} "rounds."`);
   }
   
 let items = ["rock", "paper", "scissors"];
 
 console.log(items);
 
-function getComputerChoice() {
+function computer() {
     let number = Math.floor(Math.random() * items.length); 
     let random_computerChoice = items[number];
         return random_computerChoice;
+    console.log(random_computerChoice);    
 }
 
+var PlayerOne = prompt("Rock, Paper, or Scissors");
+ var PlayerTwo = prompt("Rock, Paper, or Scissors");
+
+ 
+
+/*var Game = function(input,pl2){
+    let pl1 = PlayerOne
+    let pl2 = computer();
+
+    var r = "Rock";
+    var p = "Paper";
+    var s = "Scissors";
+    if(pl1 === pl2){
+        console.log("Tie");
+    }else{
+        if(pl1===r&&pl2===s||pl1===p&&pl2===r||pl1===s&&pl2===p){
+            console.log("Player One Wins!");
+        }else{
+            console.log("Player Two Wins!");
+        }
+    }
+};*/
+
+/*Game(PlayerOne,PlayerTwo);
 function playGame(userChoice) {
     const computerChoice = getComputerChoice();
     console.log(`user choice => ${userChoice}`);
@@ -50,11 +75,9 @@ function playGame(userChoice) {
         var span = document.getElementById('s').innerText = 'It\'s a tie!'
         break;
     }
-  }
+  }*/
 
-  
 
-var beginGame = playGame();
+console.log(getComputerChoice(items));
 
-var computerMove = getComputerChoice(items);
-
+console.log(game(),getComputerChoice());

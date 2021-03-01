@@ -2,11 +2,17 @@ body {
     background-color: #7e96af;
 }
 h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-      
+    font-family: Georgia, 'Times New Roman', Times, serif;     
 }
 
-img {
-    
-    
+main {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+/*.img{
+    width: auto;
+    
+
+}*/
