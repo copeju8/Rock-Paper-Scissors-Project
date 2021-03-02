@@ -23,8 +23,8 @@ function computer() {
     console.log(random_computerChoice);    
 }
 
-var PlayerOne = prompt("Rock, Paper, or Scissors");
- var PlayerTwo = prompt("Rock, Paper, or Scissors");
+/*var PlayerOne = prompt("Rock, Paper, or Scissors");
+ var PlayerTwo = prompt("Rock, Paper, or Scissors");*/
 
  
 

@@ -1,5 +1,11 @@
 body {
     background-color: #7e96af;
+    background-image: url(https://www.rpmagicshop.com/wp-content/uploads/2017/06/59977-full.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
 }
 h1{
     font-family: Georgia, 'Times New Roman', Times, serif;     
@@ -10,9 +16,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/*.img{
-    width: auto;
-    
 
-}*/
+}
+#img{
+   
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
