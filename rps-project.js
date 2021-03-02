@@ -1,8 +1,3 @@
-/*window.onload= loadAlert;
-function loadAlert() {
-alert("Welcome to Rock paper scissors game! \nStart the game by opening the console (Press F12)\nNext and running the playGame().");
-}*/
-
 function gameIntro() {
     window.onload=gameIntro;
     alert("Welcome to Rock paper scissors game! \nStart the game by opening the console (Press F12)\nNext and running the playGame().");
@@ -12,72 +7,45 @@ function gameIntro() {
     console.log(`"We are playing" ${input} "rounds."`);
   }
   
-let items = ["rock", "paper", "scissors"];
+var items = ["rock", "paper", "scissors"];
+/*var win = 0;
+var loss = 0;
+var tie = 0;
+for(i = 0; i < input.length; i++){*/
 
-console.log(items);
+  console.log(items);
 
-function computer() {
-    let number = Math.floor(Math.random() * items.length); 
-    let random_computerChoice = items[number];
-        return random_computerChoice;
-    console.log(random_computerChoice);    
-}
+  function computer() {
+      let number = Math.floor(Math.random() * items.length); 
+      let random_computerChoice = items[number];
+          console.log(`The computer chose ${random_computerChoice}.`);  
+  }
 
-/*var PlayerOne = prompt("Rock, Paper, or Scissors");
- var PlayerTwo = prompt("Rock, Paper, or Scissors");*/
-
- 
-
-/*var Game = function(input,pl2){
-    let pl1 = PlayerOne
-    let pl2 = computer();
-
-    var r = "Rock";
-    var p = "Paper";
-    var s = "Scissors";
-    if(pl1 === pl2){
-        console.log("Tie");
-    }else{
-        if(pl1===r&&pl2===s||pl1===p&&pl2===r||pl1===s&&pl2===p){
-            console.log("Player One Wins!");
-        }else{
-            console.log("Player Two Wins!");
-        }
+  function playerOne() {  
+    var player = prompt("Please choose one items: Rock, paper, or scissors.").toLowerCase();;
+        if (player != null) {  
+        console.log(`Player one chose ${player}.`);  
     }
-};*/
-
-/*Game(PlayerOne,PlayerTwo);
-function playGame(userChoice) {
-    const computerChoice = getComputerChoice();
-    console.log(`user choice => ${userChoice}`);
-    console.log(`The computer chose is ${computerChoice}`);
-    switch (userChoice + computerChoice) {
-      case "rockscissors":
-      case "paperrock":
-      case "scissorspaper":
-        //console.log(`User Win's.`);
-        var span = document.getElementById('s').innerText = 'user Wins!'
-       // userScore_span.innerText++;
-        break;
-
-      case "rockpaper":
-      case "paperscissors":
-      case "scissorsrock":
-       // console.log(`User looses.`);
-       // computerScore_span.innerText++;
-        var span = document.getElementById('s').innerText = 'user loses!'
-        break;
-  
-      case "rockrock":
-      case "paperpaper":
-      case "scissorsscissors":
-       // console.log(`Its a Tie`);
-        var span = document.getElementById('s').innerText = 'It\'s a tie!'
-        break;
-    }
-  }*/
+  function playGame (computer,playerOne){
+      //let player =  prompt("Please choose one items: Rock, paper, or scissors.").toLowerCase();
+      var r = "Rock";
+      var p = "Paper";
+      var s = "Scissors";
+      if(playerOne === computer){
+          console.log("It'a tie!");
+      }else{
+          if(playerOne===r && computer ===s|| 
+            playerOne ===p && computer===r||
+            playerOne ===s && computer ===p){
+              console.log("Player One Wins!");
+          }else{
+              console.log("Player Two Wins!");
+          }
+      }
+};
 
 
-console.log(getComputerChoice(items));
+//var results = compare(userChoice,computerChoice);
 
-console.log(game(),getComputerChoice());
+
+

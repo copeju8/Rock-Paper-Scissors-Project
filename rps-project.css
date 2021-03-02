@@ -5,17 +5,22 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
+   
 }
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;     
-}
-
 main {
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 10%;     
+}
+
+main .btn{
+    align-item: center;
 
 }
 #img{
