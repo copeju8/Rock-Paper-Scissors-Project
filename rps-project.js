@@ -7,45 +7,57 @@ function gameIntro() {
     console.log(`"We are playing" ${input} "rounds."`);
   }
   
-var items = ["rock", "paper", "scissors"];
-/*var win = 0;
-var loss = 0;
-var tie = 0;
-for(i = 0; i < input.length; i++){*/
+  var items = ["rock", "paper", "scissors"];
 
-  console.log(items);
+console.log(items);
 
   function computer() {
-      let number = Math.floor(Math.random() * items.length); 
-      let random_computerChoice = items[number];
-          console.log(`The computer chose ${random_computerChoice}.`);  
-  }
+      var number = Math.floor(Math.random() * items.length); 
+      var random_computerChoice = items[number].toLowerCase();
+        return random_computerChoice; 
+  };
 
   function playerOne() {  
-    var player = prompt("Please choose one items: Rock, paper, or scissors.").toLowerCase();;
-        if (player != null) {  
-        console.log(`Player one chose ${player}.`);  
+    var player = prompt("Please select one item: Rock, paper, or scissor.");
+      return player;
+  }; 
+
+  let playGame = () => {
+    gameIntro()
+    var result = console.log("Player one selected " + playerOne() + " and " + "the computer selected " + computer());
+
+    /*var win = 0;
+    var loss = 0;
+    var tie = 0;
+    for(i = 0; i < input.length; i++)*/
+    
+    switch(result) {
+        case 1:
+          playerOne === computer
+          console.log("Result: It'a tie!");
+          break;
+        case 2:
+          playerOne === items[1] && computer === items[3]|| 
+          playerOne === items[2] && computer === items[1]||
+          playerOne === items[3] && computer === items[2]
+          console.log("Result: Player One Wins!");
+            break;
+
+         default:
+          console.log("Result: Player Two Wins!");
     }
-  function playGame (computer,playerOne){
-      //let player =  prompt("Please choose one items: Rock, paper, or scissors.").toLowerCase();
-      var r = "Rock";
-      var p = "Paper";
-      var s = "Scissors";
-      if(playerOne === computer){
-          console.log("It'a tie!");
-      }else{
-          if(playerOne===r && computer ===s|| 
-            playerOne ===p && computer===r||
-            playerOne ===s && computer ===p){
-              console.log("Player One Wins!");
-          }else{
-              console.log("Player Two Wins!");
-          }
-      }
-};
 
 
-//var results = compare(userChoice,computerChoice);
-
-
+      /*if(playerOne === computer) {
+             return "Result: It'a tie!";
+          
+      }else if (playerOne === items[1] && computer === items[3]|| 
+                playerOne === items[2] && computer === items[1]||
+                playerOne === items[3] && computer === items[2]) {
+                 return "Result: Player One Wins!";
+               
+      } else {
+          return"Result: Player Two Wins!";
+      }*/
+  };
 
