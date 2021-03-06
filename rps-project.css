@@ -1,6 +1,6 @@
 body {
     background-color: #7e96af;
-    background-image: url(https://www.rpmagicshop.com/wp-content/uploads/2017/06/59977-full.png);
+    background-image: url("./images/psr.jpg");
     background-size: 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,17 +12,23 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.btn {
 
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    margin-left: 25%;
+    width: 50%;
+   
 }
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 10%;     
+   padding-top: 10%;  padding-top: 10%;     
 }
 
-main .btn{
-    align-item: center;
 
-}
 #img{
    
     max-width: 100%;
