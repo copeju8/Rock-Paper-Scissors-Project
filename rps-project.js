@@ -9,6 +9,17 @@
     }
   
     const items = ["rock", "paper", "scissors"];
+
+    /*const choices = [
+      
+      {choice: "player", form:"rock"}, 
+      {choice: "player", form:"paper"}, 
+      {choice: "player", form:"scissors"}, 
+      {choice: "computer", form:"rock"}, 
+      {choice: "computer", form:"paper"}, 
+      {choice: "computer", form:"scissors"}, 
+    ];*/
+
             
     var player;
     var comp;
@@ -56,22 +67,26 @@
         }  
       }    
     
+// let numberGreaterthen5 = [];
+
+// numArray.forEach(function (number) {
+//     if (number > 5) {
+//         numberGreaterthen5.push(number);
+//     }
+// });
     
-   /* Winner: rock and scissors, rock wins
-            scissors and paper, scissors wins
-            paper and rock, paper wins*/
+//rock and scissors, rock wins
+//scissors and paper, scissors wins
+//paper and rock, paper wins
 
 
-    function playGame(){
-      
+    function playGame(){    
       var rounds = 0;
       var start = gameIntro();
       alert("You and the computer are playing " + start + " rounds.")
       alert("You go first!");
 
-        
         console.log("Round: " + rounds++);
-
           var player = playerOne();
           var p1 = player;
           var comp = computer();
