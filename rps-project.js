@@ -10,24 +10,23 @@
   
     const items = ["rock", "paper", "scissors"];
 
-    /*const choices = [
+    const scores = [
       
-      {choice: "player", form:"rock"}, 
-      {choice: "player", form:"paper"}, 
-      {choice: "player", form:"scissors"}, 
-      {choice: "computer", form:"rock"}, 
-      {choice: "computer", form:"paper"}, 
-      {choice: "computer", form:"scissors"}, 
-    ];*/
-
-            
+      {player: "rock", computer: "scissors", win: "player"}, 
+      {player: "paper", computer: "rock", win: "player"},
+      {player: "scissors", computer: "paper", win: "player"},
+      {player: "scissors", computer: "rock", win: "computer"},
+      {player: "rock", computer: "paper", win: "computer"},
+      {player: "paper", computer: "scissors", win: "computer"},
+    ];
+      
     var player;
     var comp;
 
     function playerOne() {  
         let player = prompt("Please select one item: rock, paper, or scissor.");      
           if (player.toLowerCase() !=null){
-            return  player;
+            return player;
           } 
         }    
     function computer() {
@@ -35,9 +34,8 @@
         var comp = items[num].toLowerCase();
           return comp;
         }
-        
     
-    function compare (choice1, choice2) { 
+    function compare (player, comp) { 
       
       let tie = 0;
       let win = 0;
@@ -46,20 +44,20 @@
       let computerScore = 0;
 
       
-        if(choice1 === choice2){
+        if(player === comp){
             return "The choice is a tie";
 
         }
-        else if(choice1 === "rock"){
-              if(choice2 === "scissors"){
+        else if(player === "rock"){
+              if(comp === "scissors"){
                 return "Rock wins!"
               }
                 else{
                   return "Paper wins"
         }  
 
-        }else if(choice2 === "paper"){
-                if(choice2 ==="rock"){
+        }else if(player === "paper"){
+                if(comp ==="rock"){
                     return"Paper wins!";
                 }else {
                     return "scissors wins";
