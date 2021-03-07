@@ -21,6 +21,9 @@ main {
     justify-content: center;
     margin-left: 25%;
     width: 50%;
+    height: 30px;
+    color:blue;
+    font-size: 14pt;
    
 }
 h1 {
@@ -29,7 +32,11 @@ h1 {
 }
 
 footer {
-   
+   position: fixed;
+   left: 20%;
+   bottom: 5%;
+   width: 65%;
+   font-size: 14pt;
 }
 
 
