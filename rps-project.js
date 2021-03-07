@@ -21,34 +21,45 @@
             return  player;
           } 
         }    
-      function computer() {
+     function computer() {
         var num = Math.floor(Math.random() * items.length); 
         var comp = items[num].toLowerCase();
           return comp;
         }
          
     
-      function winner() {   
+      function compare (choice1, choice2) {   
         //var tie = [];
-        //for (let i = 0; i < items.length; i++) {
-          if (items[0] == player && items[0] == computer[0]){   
-            return "it is a tie";
-      }   
-         
-      }
         
-       
-       /* else if (player === items[1] && cp === items[3]|| 
-              player === items[2] && cp === items[1]||
-              player === items[3] && cp === items[2]) {
-        {
-          console.log( "tea");
-              return("Result: Player One won!");         
+        if(choice1 === choice2){
+            return "The choice is a tie";
         }
-        }else {
-              //return ("Result: The computer won!"); 
-  }  
-  console.log( "tom");*/
+        else if(choice1 === "rock"){
+
+              if(choice2 = "scissors"){
+
+                return "rock wins!"
+              }
+                else{
+                  return "paper wins"
+        }
+        
+        }
+        else if(choice2 ==="paper"){
+                if(choice2 ==="rock"){
+                    return"Paper wins!";
+                }    
+                else {
+                    return "scissors wins";
+                }
+
+
+        }  
+      }   
+    
+      
+       
+       
 
 
 
@@ -58,11 +69,7 @@
             scissors and paper, scissors wins
             paper and rock, paper wins
 
-    Loss: 
     
-    tie:  rock and rock
-          paper and paper
-          scissor and scissor
             
     /*
 
@@ -78,34 +85,43 @@
 
     function playGame(){
       var start = gameIntro();
+      var rounds = 0;
       alert("You and the computer are playing " + start + " rounds.")
-      //console.log("Round: " + rounds);
-      
       alert("You go first!");
-      console.log("Player one selected " + playerOne() + " and Computer selected " + computer() +"!"); 
-      //var result = winner();
-      //console.log(result);
 
-
-
-
-
+     
+          
+          console.log("Round: " + rounds++);
+          var player = playerOne();
+          //let player = prompt("Please select one item: rock, paper, or scissor.");  
+          var p1 = player;
+          var comp = computer();
+          var cp = comp;
+          console.log("You selected " + p1 + " and Computer selected " + cp +"!"); 
+          var result =  compare(p1, cp);
+          
+          console.log(result);
       
+    
+
+
+
+
       /*var p1 = playerOne();
       var cp = computer();
       alert(p1);
       winner();*/
       
-      /*if (player === items[0] && computer === items[0]){ /*|| 
-              player === items[1] && cp === items[1]||
-              player === items[2] && cp === items[2]) 
-                return player.items;
-                //console.log( "hit");
+      /*if (p1 === items && computer === items){ /*|| 
+              p1 === items && cp === items||
+              p1 === items && cp === items) 
+                return("Result: It is a tie!"); 
+                
           }   
           
            /* else if (player === items[1] && cp === items[3]|| 
-                  player === items[2] && cp === items[1]||
-                  player === items[3] && cp === items[2]) {
+                  p1 === items[2] && cp === items[1]||
+                  p1 === items[3] && cp === items[2]) {
             {
               console.log( "tea");
                   return("Result: Player One won!");         
@@ -114,4 +130,5 @@
                   //return ("Result: The computer won!"); 
       }  
       console.log( "tom");*/
-    }
+    } 
+  
