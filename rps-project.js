@@ -9,20 +9,17 @@
     }
   
     const items = ["rock", "paper", "scissors"];
-
-    const scores = [
-      
+    
+    /*const scores = [
       {player: "rock", computer: "scissors", win: "player"}, 
       {player: "paper", computer: "rock", win: "player"},
       {player: "scissors", computer: "paper", win: "player"},
       {player: "scissors", computer: "rock", win: "computer"},
       {player: "rock", computer: "paper", win: "computer"},
       {player: "paper", computer: "scissors", win: "computer"},
-    ];
+    ];*/
       
-    var player;
-    var comp;
-
+   
     function playerOne() {  
         let player = prompt("Please select one item: rock, paper, or scissor.");      
           if (player.toLowerCase() !=null){
@@ -34,16 +31,15 @@
         var comp = items[num].toLowerCase();
           return comp;
         }
-    
-    function compare (player, comp) { 
-      
-      let tie = 0;
-      let win = 0;
-      let loss = 0;
-      let playerScore = 0;
-      let computerScore = 0;
+  
 
-      
+      /*  const tally = scores.filter ((score, player, comp) => score.player === "rock" && score.computer === "scissors"|| 
+        score.player === "paper" && score.computer === "rock"||
+        score.player === "scissors" && score.computer === "paper");
+              return true;
+    }      
+        console.log(tally);
+
         if(player === comp){
             return "The choice is a tie";
 
@@ -64,22 +60,11 @@
                 }
         }  
       }    
+ */   
     
-// let numberGreaterthen5 = [];
-
-// numArray.forEach(function (number) {
-//     if (number > 5) {
-//         numberGreaterthen5.push(number);
-//     }
-// });
-    
-//rock and scissors, rock wins
-//scissors and paper, scissors wins
-//paper and rock, paper wins
-
-
     function playGame(){    
       var rounds = 0;
+      var res;
       var start = gameIntro();
       alert("You and the computer are playing " + start + " rounds.")
       alert("You go first!");
@@ -89,11 +74,18 @@
           var p1 = player;
           var comp = computer();
           var cp = comp;
-          console.log("You selected " + p1 + " and the Computer selected " + cp +"!"); 
-          
-          var result = compare(p1, cp);
-          console.log(result);
-      
-    
-    } 
-  
+       
+          return("You selected " + p1 + " and the computer selected " + cp +"!"); 
+        
+        function score (p1, cp) {  
+          switch (p1,cp) { 
+            case p1 == cp: 
+              return tie;
+              break;
+            default:
+          return ("try again");
+        } 
+      } 
+        var res = score();
+        return res
+    }
